@@ -47,7 +47,6 @@ public class LootFacade {
         Loot entityLoot = em.find(Loot.class,id);
         try {
             em.getTransaction().begin();
-
             em.remove(entityLoot);
             em.getTransaction().commit();
         } finally {

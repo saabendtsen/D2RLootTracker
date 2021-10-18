@@ -27,7 +27,11 @@ public class Loot {
             this.id = lootDTO.getId();
         }
         this.playerName = lootDTO.getPlayerName();
-        this.date = lootDTO.getDate();
+        if(lootDTO.getDate() != null) {
+            this.date = lootDTO.getDate();
+        } else {
+            this.date = new Date();
+        }
         this.lootDescription = lootDTO.getLootDescription();
         this.isRune = lootDTO.isRune();
         this.isValuable = lootDTO.isValuable();

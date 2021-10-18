@@ -2,6 +2,7 @@ package rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import dtos.LootDTO;
 import facades.LootFacade;
 import utils.EMF_Creator;
 
@@ -21,6 +22,16 @@ public class LootResource {
     @Produces("application/json")
     public Response getAllLoot() {
         return Response.ok(gson.toJson(instance.getAllLoot()),"application/json").build();
+    }
+
+
+    @POST
+    @Consumes("application/json")
+    public Response addLoot(String loot){
+        LootDTO dto = gson.fromJson(loot,LootDTO.class);
+        instance.addLoot(dto);
+
+        return Response.ok("Loot Added").build();
     }
 
 

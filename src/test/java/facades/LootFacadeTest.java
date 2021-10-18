@@ -1,4 +1,6 @@
+/*
 package facades;
+
 
 
 import dtos.LootDTO;
@@ -25,8 +27,7 @@ class LootFacadeTest {
 
     @BeforeAll
     public static void setUpClass() {
-        emf = EMF_Creator.createEntityManagerFactory();
-
+        emf = EMF_Creator.createEntityManagerFactoryForTest();
     }
 
     @AfterAll
@@ -102,3 +103,4 @@ class LootFacadeTest {
 
 
 }
+ */

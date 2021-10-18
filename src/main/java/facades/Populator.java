@@ -5,14 +5,29 @@
  */
 package facades;
 
+import dtos.LootDTO;
 import entities.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 import utils.EMF_Creator;
+
+import java.util.Date;
 
 public class Populator {
     public static void populate() throws Exception {
+        EntityManagerFactory emf = EMF_Creator.createEntityManagerFactory();
+        LootFacade facade = LootFacade.getInstance(emf);
+
+
+        Loot loot = new Loot("Elcap", new Date(), "tal armor", false, true);
+
+
+        facade.addLoot(new LootDTO(loot));
+
+
     }
     
     public static void main(String[] args) throws Exception {
