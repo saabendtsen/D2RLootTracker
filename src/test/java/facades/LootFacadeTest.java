@@ -17,7 +17,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class LootFacadeTest {
     private Loot loot;
-
     private static EntityManagerFactory emf;
     private final LootFacade facade = LootFacade.getInstance(emf);
 
@@ -26,7 +25,7 @@ class LootFacadeTest {
 
     @BeforeAll
     public static void setUpClass() {
-        emf = EMF_Creator.createEntityManagerFactoryForTest();
+        emf = EMF_Creator.createEntityManagerFactory();
 
     }
 
