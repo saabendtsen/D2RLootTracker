@@ -1,12 +1,8 @@
 package facades;
 
-import dtos.CityInfoDTO;
+
 import dtos.LootDTO;
-import dtos.PersonDTO;
 import entities.*;
-import errorhandling.MissingFieldsException;
-import errorhandling.PersonNotFoundException;
-import org.junit.Test;
 import org.junit.jupiter.api.*;
 import utils.EMF_Creator;
 
