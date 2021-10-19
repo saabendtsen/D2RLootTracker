@@ -34,5 +34,13 @@ public class LootResource {
         return Response.ok(gson.toJson(dto)).build();
     }
 
+    @Path("/loot/{id}")
+    @DELETE
+    public Response deleteLoot(@PathParam("id") Long id){
+        instance.deleteLoot(id);
+        return Response.ok().build();
+    }
+
+
 
 }
