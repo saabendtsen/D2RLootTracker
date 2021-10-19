@@ -16,10 +16,19 @@ public class Loot {
     private String playerName;
     private Date date;
     private String lootDescription;
+    private String area;
     private boolean isRune;
     private boolean isValuable;
 
     public Loot() {
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
     }
 
     public Loot(LootDTO lootDTO) {
@@ -33,14 +42,16 @@ public class Loot {
             this.date = new Date();
         }
         this.lootDescription = lootDTO.getLootDescription();
+        this.area = lootDTO.getArea();
         this.isRune = lootDTO.isRune();
         this.isValuable = lootDTO.isValuable();
     }
 
-    public Loot(String playerName, Date date, String lootDescription, boolean isRune, boolean isValuable) {
+    public Loot(String playerName, Date date, String area, String lootDescription, boolean isRune, boolean isValuable) {
         this.playerName = playerName;
         this.date = date;
         this.lootDescription = lootDescription;
+        this.area = area;
         this.isRune = isRune;
         this.isValuable = isValuable;
     }

@@ -12,6 +12,7 @@ public class LootDTO {
     private String playerName;
     private Date date;
     private String lootDescription;
+    private String area;
     private boolean isRune;
     private boolean isValuable;
 
@@ -22,6 +23,7 @@ public class LootDTO {
         this.playerName = loot.getPlayerName();
         this.date = loot.getDate();
         this.lootDescription = loot.getLootDescription();
+        this.area = loot.getArea();
         this.isRune = loot.isRune();
         this.isValuable = loot.isValuable();
     }
@@ -34,6 +36,14 @@ public class LootDTO {
         List<LootDTO> lootDTOs = new ArrayList<>();
         entityLoot.forEach(loot -> lootDTOs.add(new LootDTO(loot)));
         return lootDTOs;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
     }
 
     public Long getId() {

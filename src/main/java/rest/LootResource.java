@@ -29,9 +29,9 @@ public class LootResource {
     @Consumes("application/json")
     public Response addLoot(String loot){
         LootDTO dto = gson.fromJson(loot,LootDTO.class);
-        instance.addLoot(dto);
+        dto = instance.addLoot(dto);
 
-        return Response.ok("Loot Added").build();
+        return Response.ok(gson.toJson(dto)).build();
     }
 
 

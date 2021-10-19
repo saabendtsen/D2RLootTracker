@@ -22,7 +22,7 @@ public class Populator {
         LootFacade facade = LootFacade.getInstance(emf);
 
 
-        Loot loot = new Loot("Elcap", new Date(), "tal armor", false, true);
+        Loot loot = new Loot("Elcap", new Date(),"Andy", "tal armor", false, true);
 
 
         facade.addLoot(new LootDTO(loot));
